@@ -39,13 +39,13 @@
             </div> 
         </header> 
          <main>
-          <section class="banner text-center  ">
+          <section id="banner-section" class="banner text-center  ">
           <div class=" bg-[url(images/banner.png)] bg-no-repeat text-white mt-16 w-full h-screen text-center  lg:ml-24 lg:mt-16 pt-20  pl-24 rounded-xl space-y-6">
             <h1 class="head-title pr-60 text-7xl font-bold">End-to-End Travel With</h1>
             
             <h3 class="head-title2 pr-60 text-5xl font-bold  text-lime-400" >S PariBahan</h3>
             <p class="describe w-6/12 ml-44">End-to-end describes a process that takes a system or service from beginning to end and delivers  a complete functional solution, usually<br> without needing to obtain anything from a third party</p>
-            <button class="btn bg-lime-400 mr-60 w-44  text-base">Buy Tickets</button>
+            <button onclick="busTicket()"  class="btn bg-lime-400 mr-60 w-44  text-base">Buy Tickets</button>
         </div>
           </section>  
 
@@ -75,14 +75,15 @@
 
                 <button class="btn mt-10 ml-96 w-80 " >See All Offers</button>
          
-          </section> 
-          <section>
-            <div  class="text-center flex flex-col item-center  mt-24 space-y-4 ">
+          </section>
+        
+          <section >
+            <div  class=" bus-ticket text-center flex flex-col item-center  mt-24 space-y-4 ">
             <h1 class="text-2xl font-bold">P.H Paribahan</h1> 
             <p>Transport  is the intentional movement of humans and goods from one location to another. <br>Modes of transport include air, land, water, cable, pipelines, and space.</p>
         </div>
-        </section> 
-        <section class="grid grid-cols-2 mt-20 ml-20">
+       <section>
+        <section id="paribahan-schedule" class=" hidden grid grid-cols-2 mt-20 ml-20">
 
           <div class="grid grid-cols-2 space-x-80">
           <div class="bus-logo flex flex-row gap-x-2">
@@ -99,7 +100,7 @@
           
         
         </section> 
-        <section > 
+        <section id="bus-schedule" class=" hidden" > 
          
          
   <div class="card w-7/12 bg-gray-100 shadow-xl ml-28 mt-10 rounded-xl h-64 "> 
@@ -125,15 +126,15 @@
           </div> -->
             <!-- </div> -->
            
-          <div class="grid grid-cols-3  ml-4 space-x-24 mt-10">
+          <div class=" grid grid-cols-3  ml-8 space-x-20 mt-10">
             <div>
             <button class="btn bg-gray-300">Boarding Point-Laxmipur</button> 
           </div> 
           <div class=" "> 
-            <button class="btn ml-2 bg-gray-300">Dropping Point -Bogura</button>
+            <button class="btn  bg-gray-300 pl-1 ">Dropping Point-Bogura</button>
           </div>  
           <div class=""> 
-            <button class="btn bg-gray-300">Est. Time-11 Hour</button> 
+            <button class="btn bg-gray-300">Est.Time-11 Hour</button> 
           </div>
           </div> 
         </div> 
@@ -144,11 +145,11 @@
 
         <!-- // select Your Seat  -->
 
-        <section> 
-          <div class="grid grid-cols-2 mt-20 ">
+        <section id="select-seat-section" class="hidden"> 
+          <div class="grid grid-cols-2 mt-20 seat-section ">
 
             <div >
-              <h1 class="ml-36 text-xl font-semibold">Select Your Seat</h1>
+              <h1 class="ml-36 text-xl font-semibold select-seat">Select Your Seat</h1>
 
           <div class="grid grid-cols-2 ml-36 mt-10 gap-44" >
 
@@ -172,68 +173,70 @@
               <button class="btn w-20 ml-96 bg-gray-300"><img src="images/Vector.png" alt=""></button>
 
 
-               <div class="ml-10 space-x-12">A
+               <div id="current-seat" class="ml-10 space-x-12">A
   
-              <button class="btn w-20">A1</button>
-              <button class="btn w-20">A2</button>
-              <button class="btn w-20">A3</button>
-              <button class="btn w-20">A4</button>
+              
+              <button id="A1" class="btn w-20">A1</button>
+              <button id="A2" class="btn w-20">A2</button>
+              <button id="A3" class="btn w-20">A3</button>
+              <button id="A4"class="btn w-20">A4</button>
             </div>
             <div class="ml-10 space-x-12 ">B
-              <button class="btn w-20">B1</button>
-              <button class="btn w-20">B2</button>
-              <button class="btn w-20">B3</button>
-              <button class="btn w-20">B4</button>
+              <button id="B1"class="btn w-20">B1</button>
+              <button id="B2"class="btn w-20">B2</button>
+              <button id="B3"class="btn w-20">B3</button>
+              <button id="B4"class="btn w-20">B4</button>
             </div> 
             <div class="ml-10 space-x-12 ">C
-              <button class="btn w-20">C1</button>
-              <button class="btn w-20">C2</button>
-              <button class="btn w-20">C3</button>
-              <button class="btn w-20">C4</button>
+              <button id="C1" class="btn w-20">C1</button>
+              <button id="C2"class="btn w-20">C2</button>
+              <button id="C3"class="btn w-20">C3</button>
+              <button id="C4"class="btn w-20">C4</button>
             </div> 
             <div class="ml-10 space-x-12 ">D
-              <button class="btn w-20">D1</button>
-              <button class="btn w-20">D2</button>
-              <button class="btn w-20">D3</button>
-              <button class="btn w-20">D4</button> 
+              <button id="D1"class="btn w-20">D1</button>
+              <button id="D2"class="btn w-20">D2</button>
+              <button id="D3"class="btn w-20">D3</button>
+              <button id="D4"class="btn w-20">D4</button> 
             </div> 
              <div class="ml-10 space-x-12 ">E
-              <button class="btn w-20">E1</button>
-              <button class="btn w-20">E2</button>
-              <button class="btn w-20">E3</button>
-              <button class="btn w-20">E4</button>
+              <button id="E1"class="btn w-20">E1</button>
+              <button id="E2"class="btn w-20">E2</button>
+              <button id="E3"class="btn w-20">E3</button>
+              <button id="E4"class="btn w-20">E4</button>
             </div> 
             <div class="ml-10 space-x-12 ">F
-              <button class="btn w-20">F1</button>
-              <button class="btn w-20">F2</button>
-              <button class="btn w-20">F3</button>
-              <button class="btn w-20">F4</button>
+              <button id="F1"class="btn w-20">F1</button>
+              <button id="F2" class="btn w-20">F2</button>
+              <button id="F3"class="btn w-20">F3</button>
+              <button id="F4"class="btn w-20">F4</button>
             </div>
 
             <div class="ml-10 space-x-12 ">G
-              <button class="btn w-20">G1</button>
-              <button class="btn w-20">G2</button>
-              <button class="btn w-20">G3</button>
-              <button class="btn w-20">G4</button>
+              <button id="G1"class="btn w-20">G1</button>
+              <button id="G2"class="btn w-20">G2</button>
+              <button id="G3"class="btn w-20">G3</button>
+              <button id="G4"class="btn w-20">G4</button>
             </div> 
             <div class="ml-10 space-x-12 ">H
-              <button class="btn w-20">H1</button>
-              <button class="btn w-20">H2</button>
-              <button class="btn w-20">H3</button>
-              <button class="btn w-20">H4</button>
+              <button id="F1"class="btn w-20">H1</button>
+              <button id="F2"class="btn w-20">H2</button>
+              <button id="F3"class="btn w-20">H3</button>
+              <button id="F4"class="btn w-20">H4</button>
             </div> 
             <div class="ml-10 space-x-12">I
-              <button class="btn w-20">I1</button>
-              <button class="btn w-20">I2</button>
-              <button class="btn w-20">I3</button>
-              <button class="btn w-20">I4</button>
+              <button id="I1" class="btn w-20">I1</button>
+              <button id="I2"class="btn w-20">I2</button>
+              <button id="I3"class="btn w-20">I3</button>
+              <button id="I4"class="btn w-20">I4</button>
             </div> 
             <div class="ml-10 space-x-12 ">J
-              <button class="btn w-20">J1</button>
-              <button class="btn w-20">J2</button>
-              <button class="btn w-20">J3</button>
-              <button class="btn w-20">J4</button> 
+              <button id="J1"class="btn w-20">J1</button>
+              <button id="J2"class="btn w-20">J2</button>
+              <button id="J3"class="btn w-20">J3</button>
+              <button id="J4"class="btn w-20">J4</button> 
             </div> 
+            
             </div>
           </div> 
         </div> 
@@ -241,16 +244,19 @@
 
 
        
-
-        <div class="space-y-12"> 
+      
+        <div class="space-y-4  "> 
+         
           
           <h1 class="ml-8 text-xl font-semibold">Select Your Seat</h1>
+        
        
 
-          <div class="grid grid-cols-3 mt-8 ml-8">
+          <div class="grid grid-cols-3 mt-8 ml-8 bg-gray-100  pt-6 pb-6 w-10/12 pl-8"> 
+  
 
             <div class="space-y-6">
-              <p>Seat <span></span></p>
+              <p>Seat <span><button class="btn bg-[#1DD100] text-white w-10 h-4 ">0</button></span></p>
               <p>C2</p>
               <p>C2</p>
               
@@ -272,20 +278,36 @@
             </div>  
             </div>
   
-            <div class="grid grid-cols-2 ml-8 gap-44">
-              <p >Total Price</p> 
+            <div class="grid grid-cols-2 ml-12 gap-32">
+              <p>Total Price</p> 
               <p>BDT 1100</p>
             </div>
   
-            <div>
-              <input type="text"><button class="btn">Apply</button>
+            <div class="ml-24">
+              <input type="text" class="p-2 w-72" placeholder="Have  any copupon"><button class="btn bg-[#1DD100]">Apply</button>
             </div>
   
             
   
-            <div class="grid grid-cols-2 ml-8 gap-44">
+            <div class="grid grid-cols-2 ml-12 gap-32">
               <p>Grand Total</p>
               <p>BDT 1100</p>
+            </div>
+
+
+            <div>
+              <form action="">
+                <div>Passenger Name
+                  <input type="text" placeholder="Enter your name">
+                </div>
+                <div for="phone">Phone Number
+                  <input type="text" id="phone" placeholder="Enter your phone number">
+                </div>
+                <div>Email ID
+                  <input type="text" placeholder="Enter your email id">
+                </div>
+                <button class="btn bg-[#1DD100]">Next</button>
+              </form>
             </div>
   
           </div>
@@ -294,7 +316,7 @@
 
    
           
-     
+      </section>
        
       </section>
 
@@ -303,7 +325,9 @@
    
 
     <footer></footer>
-    
+   <script src="script/bus-ticket.js"></script>
+   <script src="script/utilize.js"></script>
+   
 </body> 
-<script></script>
+
 </html>
