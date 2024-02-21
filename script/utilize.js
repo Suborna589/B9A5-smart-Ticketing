@@ -17,15 +17,4 @@ function  addBackgroundById(elementId){
 
 }
 
-function getRandomSelect(){
-    const selectedString ="abcdefghij"; 
-    const selects= selectedString.split(''); 
 
-
-    const randomSelect =Math.random()*40;
-    const index =Math.round(randomSelect);
-
-    const seatNumber=selects[index];
- 
-    return seatNumber;
-}
